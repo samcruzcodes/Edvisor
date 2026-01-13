@@ -14,21 +14,18 @@
 
 <body>
 
-  <header>
-    <a href="landing_page.html"><img src="assets/blue logo.png" class="nav"> </a>
-    <center>
-      <h1 class="college">College Students</h1>
-      <p class="desc">College can be an amazing and unforgettable time in your life. However it could also be really
-        tough for some. College is different from high school in many ways. The classes, homework, readings, and even
-        the people you meet will be different—but you can definitely succeed with the right mindset. We want to help you
-        through this journey!
-      </p>
-    </center>
+  <header style="text-align: center">
+    <a href="landing_page.html"><img src="assets/blue logo.png" class="nav" alt="EdVisor logo - return to home"> </a>
+    <h1 class="college">College Students</h1>
+    <p class="desc">College can be an amazing and unforgettable time in your life. However it could also be really
+      tough for some. College is different from high school in many ways. The classes, homework, readings, and even
+      the people you meet will be different—but you can definitely succeed with the right mindset. We want to help you
+      through this journey!
+    </p>
   </header>
 
   <!-- nav bar for page -->
-  <div class="direct">
-    </a>
+  <nav class="direct">
     <a href="#scholarship" class="tabs">
       <h4 class="scholarship">
         Scholarship resources </h4>
@@ -36,15 +33,16 @@
     <a href="#volunteer" class="tabs">
       <h4 class="volunteer">
         Volunteer resources </h4>
-      <a href="#resume" class="tabs">
-        <h4 class="resume">
-          Resume Building</h4>
-      </a>
-      <a href="#Study" class="tabs">
-        <h4 class="study">
-          Studying resources</h4>
-      </a>
-  </div>
+    </a>
+    <a href="#resume" class="tabs">
+      <h4 class="resume">
+        Resume Building</h4>
+    </a>
+    <a href="#Study" class="tabs">
+      <h4 class="study">
+        Studying resources</h4>
+    </a>
+  </nav>
 
   <section id="scholarship">
     <br>
@@ -85,16 +83,16 @@
       purpose greater than yourself. That being said, it’s not about how much time you can give, but about the love you
       pour from your heart into what you do.
     </h3>
+    <h3>These search browsers will allow you to look up almost any volunteer opportunity out there!</h3>
     <ul>
-      <h3>These search browsers will allow you to look up almost any volunteer opportunity out there!</h3>
       <li><a href="https://www.justserve.org/" class="inText" target="_blank"><strong>JustServe</strong></a></li>
       <li><a href="https://www.idealist.org/en/volunteer?actionType=VOLOP&q=" class="inText"
           target="_blank"><strong>Idealist</strong></a></li>
       <li><a href="https://www.volunteermatch.org/search?v=true&onloc=false" class="inText"
           target="_blank"><strong>VolunteerMatch</strong></a></li>
     </ul>
+    <h3>Here are some more specific websites!</h3>
     <ul>
-      <h3>Here are some more specific websites!</h3>
       <li><a href="https://join.unicefusa.org/unite" class="inText" target="_blank"><strong>Unicef</strong></a></li>
       <li><a href="https://www.redcross.org/volunteer/volunteer-opportunities.html" class="inText"
           target="_blank"><strong>Red Cross</strong></a></li>
@@ -137,16 +135,13 @@
       study or work sessions. The method involves breaking your work or study time into short intervals called
       "pomodoros," followed by short breaks.
     </h3>
-    <center>
-      <h3>Below we present you pomofocus.io, an online pomodoro timer!</h3>
-    </center>
+    <h3 style="text-align: center">Below we present you pomofocus.io, an online pomodoro timer!</h3>
     <br>
-    <!-- embedds pomodoro method timer website -->
-    <center>
-      <iframe src="https://pomofocus.io/"></iframe>
-    </center>
+    
+    <div style="text-align: center">
+      <iframe src="https://pomofocus.io/" title="Pomodoro timer - pomofocus.io"></iframe>
+    </div>
     <br>
-    </h3>
     <h3>How to effectively use pomofocus.io:</h3>
     <ol>
       <li> Pick a task you want to focus on in this session.</li>
@@ -155,6 +150,71 @@
     </ol>
     <h3>Its that simple!</h3>
   </section>
+
+  <section id="feedback">
+    <br>
+    <h2>Questions or Feedback?</h2>
+    <br>
+    <h3>Have a question or want to share your experience? Drop us a message!</h3>
+    <br>
+    <form id="contactForm" class="contact-form">
+      <label for="userName">Your Name:</label>
+      <input type="text" id="userName" name="userName" placeholder="Enter your name" required>
+      <span class="error-msg" id="nameError"></span>
+
+      <label for="userEmail">Your Email:</label>
+      <input type="email" id="userEmail" name="userEmail" placeholder="Enter your email" required>
+      <span class="error-msg" id="emailError"></span>
+
+      <label for="userMessage">Your Message:</label>
+      <textarea id="userMessage" name="userMessage" rows="4" placeholder="Type your message here..."
+        required></textarea>
+      <span class="error-msg" id="messageError"></span>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+    <div id="formSuccess" class="success-msg" style="display: none;">
+      Thanks for your message! We'll get back to you soon.
+    </div>
+  </section>
+
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      document.querySelectorAll('.error-msg').forEach(function (el) {
+        el.textContent = '';
+      });
+
+      var isValid = true;
+      var name = document.getElementById('userName').value.trim();
+      var email = document.getElementById('userEmail').value.trim();
+      var message = document.getElementById('userMessage').value.trim();
+
+      if (name.length < 2) {
+        document.getElementById('nameError').textContent = 'Please enter a valid name';
+        isValid = false;
+      }
+
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        document.getElementById('emailError').textContent = 'Please enter a valid email';
+        isValid = false;
+      }
+
+      if (message.length < 10) {
+        document.getElementById('messageError').textContent = 'Message must be at least 10 characters';
+        isValid = false;
+      }
+
+      if (isValid) {
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      }
+    });
+  </script>
+
 
 </body>
 

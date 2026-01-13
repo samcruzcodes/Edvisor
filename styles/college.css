@@ -74,7 +74,7 @@ body {
 }
 
 /* local page nav bar */
-.direct {
+nav.direct {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -87,7 +87,7 @@ body {
   position: sticky;
 }
 
-/* local page nav bar */
+/* local page nav bar buttons */
 .scholarship,
 .volunteer,
 .study,
@@ -154,7 +154,6 @@ ul {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: 'Comfortaa', "Century Gothic";
-
 }
 
 ol {
@@ -164,4 +163,50 @@ ol {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: 'Comfortaa', "Century Gothic";
+}
+
+/* contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  gap: 10px;
+}
+
+.contact-form label {
+  margin-top: 10px;
+  color: white;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 2px solid #00B4D8;
+  border-radius: 8px;
+}
+
+.submit-btn {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: #00B4D8;
+  color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0096C7;
+}
+
+.error-msg {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+}
+
+.success-msg {
+  color: white;
+  padding: 20px;
+  background-color: #00B4D8;
+  border-radius: 10px;
 }
