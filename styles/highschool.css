@@ -164,3 +164,49 @@ ul {
   font-family: 'Comfortaa', "Century Gothic";
 
 }
+
+/* contact form */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  gap: 10px;
+}
+
+.contact-form label {
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 2px solid #FF85A1;
+  border-radius: 8px;
+}
+
+.submit-btn {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: #FF85A1;
+  color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #ff1034;
+}
+
+.error-msg {
+  color: #ff1034;
+  font-size: 0.9rem;
+}
+
+.success-msg {
+  color: #2e7d32;
+  padding: 20px;
+  background-color: #c8e6c9;
+  border-radius: 10px;
+}
