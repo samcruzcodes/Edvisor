@@ -2,7 +2,6 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  /* removes scroll for homepage*/
   overflow: hidden;
 }
 
@@ -55,13 +54,12 @@ h2 {
 }
 
 
-/* ▼ removes the underline could also change color of links for homepage if you want ▼ */
 .link {
   text-decoration: none;
 }
 
 
-/* ▼ individual tabs transform on hover and colors ▼ */
+/*  individual tabs transform on hover and colors  */
 .highschool {
   background-color: rgb(253, 197, 245);
   transition-property: transform;
@@ -132,11 +130,3 @@ button {
   font-style: bold;
   border: transparent;
 }
-
-
-
-/* button:hover {
-  transform: translateY(-0.5rem);
-}
- */
-

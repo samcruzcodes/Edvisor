@@ -1,5 +1,5 @@
 #preloader{
-  background: #805431 url("loader.gif") no-repeat center center;
+  background: #805431 url("../assets/loader.gif") no-repeat center center;
   background-size: 20%;
   height:100vh;
   width:100%;
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  background-image: url("table.jpg");
+  background-image: url("../assets/table.jpg");
   font-family: 'Comfortaa', "Century Gothic", "Helvetica";
 }
 
