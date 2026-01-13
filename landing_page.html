@@ -15,19 +15,20 @@
 
   <div id="preloader"></div>
 
-  <div class="book">
-    <img id="book" src="assets/book.png">
+  <main class="book">
+    <img id="book" src="assets/book.png" alt="Open book illustration">
     <h1 class="name">EdVisor</h1>
     <div class="pen">
-      <img id = "pen" src = "assets/pencil.png">
+      <img id="pen" src="assets/pencil.png" alt="Pencil illustration">
     </div>
     <div class="phones">
-      <a href="about.html" class="link"><img id="phone" src="assets/phone.png">
+      <a href="about.html" class="link">
+        <img id="phone" src="assets/phone.png" alt="Phone - click for About Us">
         <h2 id="about">About Us</h2>
       </a>
     </div>
     <!-- tabs to send to page -->
-    <div id="tabs-container">
+    <nav id="tabs-container">
       <div class="tabs">
         <a href="highschool.html" class="link">
           <h2 class="highschool"> High School Students </h2>
@@ -39,18 +40,17 @@
           <h2 class="college"> College Students </h2>
         </a>
       </div>
-    </div>
-  </div>
+    </nav>
+  </main>
 
-<script>
-  function closepreloader(){
-            document.getElementById("preloader").style.display = 'none';
-        }
-        window.addEventListener("load",function(){
-            setTimeout(closepreloader, 700);
-            
-        });
-</script>
+  <script>
+    function closepreloader() {
+      document.getElementById("preloader").style.display = 'none';
+    }
+    window.addEventListener("load", function () {
+      setTimeout(closepreloader, 700);
+    });
+  </script>
 
 </body>
 

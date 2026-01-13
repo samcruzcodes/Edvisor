@@ -36,29 +36,34 @@ html::-webkit-scrollbar-track:hover {
   transform: rotate(10deg)translate(1.3rem, 2.6rem);
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100vh;
-  justify-content: center;
-  align-items: flex-start;
+header {
+  text-align: center;
 }
 
-h1 {
+header h1 {
   font-family: 'Lilita One';
   text-shadow: black 3px 3px 2px;
   font-size: 3.5rem;
   background-color: #56AB91;
   color: #8af0af;
-  text-align: center;
+  display: inline-block;
   padding-top: 7px;
   padding-bottom: 7px;
   padding-left: 25px;
   padding-right: 25px;
   border: 5px solid #4a9c84;
   border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 80vh;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
 }
 
 h2 {
@@ -109,10 +114,13 @@ p {
   max-width: 300px;
 }
 
-.end {
+footer.end {
+  font-family: 'Lilita One';
+  text-shadow: black 3px 3px 2px;
   font-size: 2.5rem;
-  bottom: 0;
-  position: sticky;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
 }
 
 a {
@@ -124,7 +132,6 @@ i {
   text-shadow: black 0px 0px 0px;
   margin-left: 5px;
 }
-
 
 i {
   transition: transform 0.2s ease;
